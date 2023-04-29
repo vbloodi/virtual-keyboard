@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/fonts.css" />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <script src="./scripts/virtual-keyboard.js"></script>
@@ -21,7 +21,10 @@
         <h1 class="title__eng">RSS Virtual Keyboard</h1>
         <h1 class="title__ru hidden">RSS Виртуальная Клавиатура</h1>
       </div>
-      <textarea name="textarea" id="textarea" cols="50" rows="5" class="main__textarea textarea"></textarea>
+      <div class="textarea__container">
+        <div class="textarea__container"></div>
+        <textarea name="textarea" id="textarea" maxlength="255" class="main__textarea textarea"></textarea>
+      </div>
       <div class="main__keyboard keyboard" id="keyboard">
         <div class="keyboard__row row">
           <div class="keyboard__key key Backquote">
@@ -1996,7 +1999,7 @@
               </span>
             </span>
           </div>
-          <div class="keyboard__key key ArrowUp">
+          <div class="keyboard__key key Arrow-Up">
             <span class="eng">
               <span class="caseDown">
                 <span class="key__center">↑</span>
@@ -2335,7 +2338,7 @@
         <p class="description__ru hidden">Клавиатура была создана в Windows ОС</p>
       </div>
       <div class="language">
-        <p class="language__eng">For language switch, use: left Shift + left Alt</p>
+        <p class="language__eng">For language switch press: left Shift + left Alt</p>
         <p class="language__ru hidden">Для переключения языка используйте: левый Shift + левый Alt</p>
       </div>
     </main>
