@@ -1,13 +1,11 @@
 /* --- COMMON --- */
 
 body {
+  height: 100vh;
+  overflow: hidden;
   color: #ffffff;
   background: rgb(34, 34, 34);
-  background: radial-gradient(circle, rgba(34, 34, 34, 1) 0%, rgba(22, 22, 22, 1) 100%);
-}
-
-.hidden {
-  display: none;
+  background: radial-gradient(circle, rgba(34, 34, 34, 1) 10%, rgba(22, 22, 22, 1) 100%);
 }
 
 /* --- MAIN --- */
@@ -111,7 +109,7 @@ body {
   flex-basis: 80px;
 }
 
-.CapsLock,
+.Caps-Lock,
 .Enter {
   flex-basis: 110px;
 }
@@ -138,7 +136,7 @@ body {
 .Control-Right,
 .Enter,
 .Delete,
-.CapsLock,
+.Caps-Lock,
 .Tab,
 .Meta-Key,
 .Alt-Left,
@@ -168,4 +166,22 @@ body {
 
 .language {
   margin-top: 12px;
+}
+
+/* --- MODIFIERS --- */
+
+.hidden {
+  display: none;
+}
+
+.active {
+  background-color: #303030;
+  transform: scale(0.94);
+  filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.7));
+}
+
+.active--space {
+  background-color: #303030;
+  transform: scale(0.98, 0.92);
+  filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.7));
 }
