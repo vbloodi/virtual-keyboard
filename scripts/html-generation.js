@@ -1,3 +1,4 @@
+// creating HTML Semantic with ES6 `Backquote` feature
 const htmlBox = `
 <main class="main__container">
       <div class="title">
@@ -5,7 +6,6 @@ const htmlBox = `
         <h1 class="title__ru hidden">RSS Виртуальная Клавиатура</h1>
       </div>
       <div class="textarea__container">
-        <div class="textarea__container"></div>
         <textarea name="textarea" id="textarea" maxlength="255" class="main__textarea textarea"></textarea>
       </div>
       <div class="main__keyboard keyboard" id="keyboard">
@@ -2317,12 +2317,12 @@ const htmlBox = `
         </div>
       </div>
       <div class="description">
-        <p class="description__eng">Keyboard was created in Windows OS</p>
-        <p class="description__ru hidden">Клавиатура была создана в Windows ОС</p>
+        <h2 class="description__eng">Keyboard was created in Windows OS</>
+        <h2 class="description__ru hidden">Клавиатура была создана в Windows ОС</h2>
       </div>
       <div class="language">
-        <p class="language__eng">For language switch press: left Shift + left Alt</p>
-        <p class="language__ru hidden">Для переключения языка используйте: левый Shift + левый Alt</p>
+        <h2 class="language__eng">For language switch press: left Shift + left Alt</h2>
+        <h2 class="language__ru hidden">Для переключения языка используйте: левый Shift + левый Alt</>
       </div>
     </main>
 `;
