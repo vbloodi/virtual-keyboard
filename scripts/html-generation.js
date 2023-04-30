@@ -30,7 +30,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Ё</span>
                 <span class="key__center">ё</span>
               </span>
@@ -68,7 +68,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">!</span>
                 <span class="key__center">1</span>
               </span>
@@ -106,7 +106,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">"</span>
                 <span class="key__center">2</span>
               </span>
@@ -144,7 +144,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">№</span>
                 <span class="key__center">3</span>
               </span>
@@ -182,7 +182,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">;</span>
                 <span class="key__center">4</span>
               </span>
@@ -220,7 +220,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">%</span>
                 <span class="key__center">5</span>
               </span>
@@ -258,7 +258,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">:</span>
                 <span class="key__center">6</span>
               </span>
@@ -296,7 +296,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">?</span>
                 <span class="key__center">7</span>
               </span>
@@ -334,7 +334,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">*</span>
                 <span class="key__center">8</span>
               </span>
@@ -372,7 +372,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">(</span>
                 <span class="key__center">9</span>
               </span>
@@ -410,7 +410,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">)</span>
                 <span class="key__center">0</span>
               </span>
@@ -448,7 +448,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">_</span>
                 <span class="key__center">-</span>
               </span>
@@ -486,7 +486,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">+</span>
                 <span class="key__center">=</span>
               </span>
@@ -520,7 +520,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">Backspace</span>
               </span>
               <span class="caseUp hidden">
@@ -552,7 +552,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">Tab</span>
               </span>
               <span class="caseUp hidden">
@@ -586,7 +586,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Й</span>
                 <span class="key__center">й</span>
               </span>
@@ -624,7 +624,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Ц</span>
                 <span class="key__center">ц</span>
               </span>
@@ -662,7 +662,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">У</span>
                 <span class="key__center">у</span>
               </span>
@@ -700,7 +700,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">К</span>
                 <span class="key__center">к</span>
               </span>
@@ -738,7 +738,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Е</span>
                 <span class="key__center">е</span>
               </span>
@@ -776,7 +776,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Н</span>
                 <span class="key__center">н</span>
               </span>
@@ -814,7 +814,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Г</span>
                 <span class="key__center">г</span>
               </span>
@@ -852,7 +852,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Ш</span>
                 <span class="key__center">ш</span>
               </span>
@@ -890,7 +890,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Щ</span>
                 <span class="key__center">щ</span>
               </span>
@@ -928,7 +928,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">З</span>
                 <span class="key__center">з</span>
               </span>
@@ -966,7 +966,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Х</span>
                 <span class="key__center">х</span>
               </span>
@@ -1004,7 +1004,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Ъ</span>
                 <span class="key__center">ъ</span>
               </span>
@@ -1042,7 +1042,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">/</span>
                 <span class="key__center">&bsol;</span>
               </span>
@@ -1076,7 +1076,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">Del</span>
               </span>
               <span class="caseUp hidden">
@@ -1108,7 +1108,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">Caps Lock</span>
               </span>
               <span class="caseUp hidden">
@@ -1142,7 +1142,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Ф</span>
                 <span class="key__center">ф</span>
               </span>
@@ -1180,7 +1180,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Ы</span>
                 <span class="key__center">ы</span>
               </span>
@@ -1218,7 +1218,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Ы</span>
                 <span class="key__center">ы</span>
               </span>
@@ -1256,7 +1256,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">А</span>
                 <span class="key__center">а</span>
               </span>
@@ -1294,7 +1294,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">П</span>
                 <span class="key__center">п</span>
               </span>
@@ -1332,7 +1332,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Р</span>
                 <span class="key__center">р</span>
               </span>
@@ -1370,7 +1370,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">О</span>
                 <span class="key__center">о</span>
               </span>
@@ -1408,7 +1408,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Л</span>
                 <span class="key__center">л</span>
               </span>
@@ -1446,7 +1446,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Д</span>
                 <span class="key__center">д</span>
               </span>
@@ -1484,7 +1484,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Ж</span>
                 <span class="key__center">ж</span>
               </span>
@@ -1522,7 +1522,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Э</span>
                 <span class="key__center">э</span>
               </span>
@@ -1556,7 +1556,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">Enter</span>
               </span>
               <span class="caseUp hidden">
@@ -1588,7 +1588,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">Shift</span>
               </span>
               <span class="caseUp hidden">
@@ -1622,7 +1622,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Я</span>
                 <span class="key__center">я</span>
               </span>
@@ -1660,7 +1660,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Ч</span>
                 <span class="key__center">ч</span>
               </span>
@@ -1698,7 +1698,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">С</span>
                 <span class="key__center">с</span>
               </span>
@@ -1736,7 +1736,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">М</span>
                 <span class="key__center">м</span>
               </span>
@@ -1774,7 +1774,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">И</span>
                 <span class="key__center">и</span>
               </span>
@@ -1812,7 +1812,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Т</span>
                 <span class="key__center">т</span>
               </span>
@@ -1850,7 +1850,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Ь</span>
                 <span class="key__center">ь</span>
               </span>
@@ -1888,7 +1888,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Б</span>
                 <span class="key__center">б</span>
               </span>
@@ -1926,7 +1926,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">Ю</span>
                 <span class="key__center">ю</span>
               </span>
@@ -1964,7 +1964,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__aside">,</span>
                 <span class="key__center">.</span>
               </span>
@@ -1998,7 +1998,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">↑</span>
               </span>
               <span class="caseUp hidden">
@@ -2028,7 +2028,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">Shift</span>
               </span>
               <span class="caseUp hidden">
@@ -2060,7 +2060,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">Ctrl</span>
               </span>
               <span class="caseUp hidden">
@@ -2090,7 +2090,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">&#8862;</span>
               </span>
               <span class="caseUp hidden">
@@ -2120,7 +2120,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">Alt</span>
               </span>
               <span class="caseUp hidden">
@@ -2150,7 +2150,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center"> </span>
               </span>
               <span class="caseUp hidden">
@@ -2180,7 +2180,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">Alt</span>
               </span>
               <span class="caseUp hidden">
@@ -2210,7 +2210,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">←</span>
               </span>
               <span class="caseUp hidden">
@@ -2240,7 +2240,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">↓</span>
               </span>
               <span class="caseUp hidden">
@@ -2270,7 +2270,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">→</span>
               </span>
               <span class="caseUp hidden">
@@ -2300,7 +2300,7 @@ const htmlBox = `
               </span>
             </span>
             <span class="ru hidden">
-              <span class="caseDown hidden">
+              <span class="caseDown">
                 <span class="key__center">Ctrl</span>
               </span>
               <span class="caseUp hidden">
@@ -2321,8 +2321,8 @@ const htmlBox = `
         <h2 class="description__ru hidden">Клавиатура была создана в Windows ОС</h2>
       </div>
       <div class="language">
-        <h2 class="language__eng">For language switch press: left Shift + left Alt</h2>
-        <h2 class="language__ru hidden">Для переключения языка используйте: левый Shift + левый Alt</>
+        <h2 class="language__eng">For language switch press: Shift + Alt</h2>
+        <h2 class="language__ru hidden">Для переключения языка используйте: Shift + Alt</>
       </div>
     </main>
 `;
