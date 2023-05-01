@@ -53,7 +53,6 @@ function removeLeftChar() {
   if (selectionStart !== 0) {
     mainTextarea.value = mainTextarea.value.slice(0, selectionStart - 1) + mainTextarea.value.slice(selectionStart);
   }
-  console.log(selectionStart);
 }
 
 function removeRightChar() {
@@ -63,7 +62,6 @@ function removeRightChar() {
   } else {
     mainTextarea.value = mainTextarea.value.slice(0, selectionStart) + mainTextarea.value.slice(selectionStart + 1);
   }
-  console.log(selectionStart);
 }
 
 function capsLockToggle() {
@@ -114,14 +112,7 @@ let isFirstClick = true;
 
 function handleFirstKeyDown(el) {
   let isCapsLockOn = el.getModifierState('CapsLock');
-  console.log(el.getModifierState('CapsLock'));
-  if (isCapsLockOn) {
-    console.log('Caps Lock is turned on');
-  } else {
-    console.log('Caps Lock is turned off');
-  }
   if (isFirstClick) {
-    console.log('This is the first click!');
     isFirstClick = false;
     if (isCapsLockOn) {
       capsLockKey.classList.toggle('active');
@@ -129,7 +120,6 @@ function handleFirstKeyDown(el) {
       mainTextarea.value = mainTextarea.value.toUpperCase();
     }
   } else {
-    console.log('This is not the first click.');
     window.removeEventListener('keydown', handleFirstKeyDown);
     window.removeEventListener('mousedown', handleFirstKeyDown);
   }
@@ -251,7 +241,6 @@ function pressKeyDown(el) {
     } else if (el.code === 'MetaLeft') {
       metaKey.classList.add('active');
     } else if (el.key === keyboardKeys[i].getElementsByClassName('key__center')[0].textContent) {
-      console.log(keyboardKeys[i].getElementsByClassName('key__center')[4]);
       keyboardKeys[i].classList.add('active');
       mainTextarea.value += keyboardKeys[i].getElementsByClassName('key__center')[0].textContent;
     } else if (typeof keyboardKeys[i].getElementsByClassName('key__aside')[0] !== 'undefined') {
@@ -309,7 +298,6 @@ function releaseKeyUp(el) {
 }
 
 function pressMouseDown(e) {
-  console.log(e.target);
   const targetElement = e.target;
   let target = targetElement.parentElement;
   if (target.tagName === 'DIV') {
@@ -319,11 +307,9 @@ function pressMouseDown(e) {
   }
   let elementClassCenter = target.getElementsByClassName('key__center')[0].textContent;
   let elementClassAside = '';
-  console.log(elementClassCenter + ` - key_center`);
   if (typeof target.getElementsByClassName('key__aside')[0] !== 'undefined') {
     elementClassAside = target.getElementsByClassName('key__aside')[0].textContent;
   }
-  console.log(elementClassAside + ` - key_aside`);
   if (elementClassCenter === 'Backspace' && !mainTextarea.classList.contains('active--textarea')) {
     removeLastChar();
   } else if (elementClassCenter === 'Backspace' && mainTextarea.classList.contains('active--textarea')) {
@@ -394,7 +380,6 @@ mainTextarea.addEventListener('click', function () {
 });
 
 window.addEventListener('click', function (clickOutsideTextarea) {
-  console.log(clickOutsideTextarea.target);
   if (!mainTextarea.contains(clickOutsideTextarea.target)) {
     mainTextarea.classList.remove('active--textarea');
     mainTextarea.removeEventListener('blur', returnFocus);
