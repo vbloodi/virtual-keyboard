@@ -114,6 +114,7 @@ let isFirstClick = true;
 
 function handleFirstKeyDown(el) {
   let isCapsLockOn = el.getModifierState('CapsLock');
+  console.log(el.getModifierState('CapsLock'));
   if (isCapsLockOn) {
     console.log('Caps Lock is turned on');
   } else {
@@ -137,9 +138,26 @@ function handleFirstKeyDown(el) {
 window.addEventListener('load', function () {
   window.addEventListener('mousedown', handleFirstKeyDown);
   window.addEventListener('keydown', handleFirstKeyDown);
+  if (!localStorage.getItem('language')) {
+    localStorage.setItem('language', 'eng');
+  }
+  if (localStorage.getItem('language') === 'ru') {
+    ruKeys.forEach((e) => {
+      e.classList.remove('hidden');
+      e.parentNode.insertBefore(e, e.parentNode.firstChild);
+    });
+    engKeys.forEach((e) => {
+      e.classList.add('hidden');
+    });
+  } else if (localStorage.getItem('language') === 'eng') {
+    ruKeys.forEach((e) => {
+      e.classList.add('hidden');
+    });
+    engKeys.forEach((e) => {
+      e.classList.remove('hidden');
+    });
+  }
 });
-
-let currentLanguage = 'eng';
 
 // TODO!: Add language switching + save lang in local storage
 // TODO!: Add mouse events for all buttons
@@ -151,20 +169,19 @@ function pressKeyDown(el) {
       el.preventDefault();
     }
     if ((el.code === 'ShiftLeft' && altLeftKey.classList.contains('active')) || (el.code === 'AltLeft' && shiftLeftKey.classList.contains('active'))) {
-      console.log('test 1');
       shiftLeftKey.classList.add('active');
       altLeftKey.classList.add('active');
       shiftUp();
-      if (currentLanguage === 'eng') {
-        currentLanguage = 'ru';
+      if (localStorage.getItem('language') === 'eng') {
+        localStorage.setItem('language', 'ru');
         ruKeys.forEach((e) => {
           e.classList.remove('hidden');
         });
         engKeys.forEach((e) => {
           e.classList.add('hidden');
         });
-      } else if (currentLanguage === 'ru') {
-        currentLanguage = 'eng';
+      } else if (localStorage.getItem('language') === 'ru') {
+        localStorage.setItem('language', 'eng');
         ruKeys.forEach((e) => {
           e.classList.add('hidden');
         });
@@ -206,6 +223,7 @@ function pressKeyDown(el) {
       altRightKey.classList.add('active');
     } else if (el.code === 'ControlLeft') {
       controlLeftKey.classList.add('active');
+      break;
     } else if (el.code === 'ControlRight') {
       controlRightKey.classList.add('active');
     } else if (el.code === 'CapsLock') {
@@ -237,6 +255,7 @@ function pressKeyDown(el) {
     } else if (el.code === 'MetaLeft') {
       metaKey.classList.add('active');
     } else if (el.key === keyboardKeys[i].getElementsByClassName('key__center')[0].textContent) {
+      console.log(keyboardKeys[i].getElementsByClassName('key__center')[4]);
       keyboardKeys[i].classList.add('active');
       mainTextarea.value += keyboardKeys[i].getElementsByClassName('key__center')[0].textContent;
     } else if (typeof keyboardKeys[i].getElementsByClassName('key__aside')[0] !== 'undefined') {
@@ -299,6 +318,8 @@ function pressMouseDown(e) {
   let target = targetElement.parentElement;
   if (target.tagName === 'DIV') {
     target = e.target;
+  } else if (target.tagName === 'SPAN') {
+    target = e.target.parentElement.parentElement.parentElement;
   }
   let elementClassCenter = target.getElementsByClassName('key__center')[0].textContent;
   let elementClassAside = '';
@@ -314,6 +335,7 @@ function pressMouseDown(e) {
   } else if (elementClassCenter === 'Del') {
     removeRightChar();
   } else if (elementClassCenter === 'Tab') {
+    tabKey.classList.add('active');
     mainTextarea.value += '    ';
   } else if (elementClassCenter === 'Enter') {
     mainTextarea.value += '\n';
@@ -332,12 +354,12 @@ function pressMouseDown(e) {
       capsLockKey.classList.toggle('active');
       capsLockToggle();
     }
+  } else if (capsLockKey.classList.contains('active') === true && (shiftLeftKey.classList.contains('active') || shiftRightKey.classList.contains('active'))) {
+    mainTextarea.value += elementClassAside.toLowerCase();
   } else if (capsLockKey.classList.contains('active') === true) {
     mainTextarea.value += elementClassCenter.toUpperCase();
-  } else if (capsLockKey.classList.contains('active') === false) {
-    mainTextarea.value += elementClassCenter.toLowerCase();
-  } else if (shiftLeftKey.classList.contains('active') === true || shiftRightKey.classList.contains('active') === true) {
-    mainTextarea.value += elementClassAside;
+  } else if (shiftLeftKey.classList.contains('active') || shiftRightKey.classList.contains('active')) {
+    mainTextarea.value += elementClassAside.toUpperCase();
   } else {
     mainTextarea.value += elementClassCenter;
   }

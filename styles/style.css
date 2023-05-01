@@ -93,9 +93,9 @@ body {
 
 .key__aside {
   position: absolute;
-  top: 5px;
+  top: 7px;
   left: 5px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   opacity: 0.5;
 }
 
@@ -161,7 +161,7 @@ body {
 
 .language {
   margin-top: 12px;
-  font-size: 1.35rem;
+  font-size: 1.3rem;
 }
 
 /* --- MODIFIERS --- */

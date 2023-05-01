@@ -2321,8 +2321,8 @@ const htmlBox = `
         <h2 class="description__ru hidden">Клавиатура была создана в Windows ОС</h2>
       </div>
       <div class="language">
-        <h2 class="language__eng">For language switch press: Shift + Alt</h2>
-        <h2 class="language__ru hidden">Для переключения языка используйте: Shift + Alt</>
+        <h2 class="language__eng">For language switch press: left Shift + Alt</h2>
+        <h2 class="language__ru hidden">Для переключения языка используйте: левый Shift + Alt</>
       </div>
     </main>
 `;
