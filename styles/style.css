@@ -161,7 +161,11 @@ body {
 
 .language {
   margin-top: 12px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+}
+
+.language > .ru {
+  font-size: 1.05rem;
 }
 
 /* --- MODIFIERS --- */

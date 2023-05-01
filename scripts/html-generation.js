@@ -2,8 +2,8 @@
 const htmlBox = `
 <main class="main__container">
       <div class="title">
-        <h1 class="title__eng">RSS Virtual Keyboard</h1>
-        <h1 class="title__ru hidden">RSS Виртуальная Клавиатура</h1>
+        <h1 class="eng">RSS Virtual Keyboard</h1>
+        <h1 class="ru hidden">RSS Виртуальная Клавиатура</h1>
       </div>
       <div class="textarea__container">
         <textarea name="textarea" id="textarea" maxlength="255" class="main__textarea textarea"></textarea>
@@ -2317,12 +2317,12 @@ const htmlBox = `
         </div>
       </div>
       <div class="description">
-        <h2 class="description__eng">Keyboard was created in Windows OS</>
-        <h2 class="description__ru hidden">Клавиатура была создана в Windows ОС</h2>
+        <h2 class="eng">Keyboard was created in Windows OS</>
+        <h2 class="ru hidden">Клавиатура была создана в Windows ОС</h2>
       </div>
       <div class="language">
-        <h2 class="language__eng">For language switch press: left Shift + Alt</h2>
-        <h2 class="language__ru hidden">Для переключения языка используйте: левый Shift + Alt</>
+        <h2 class="eng">For language switch press: left Shift + Alt</h2>
+        <h2 class="ru hidden">Для переключения языка используйте: левый Shift + Alt</>
       </div>
     </main>
 `;
