@@ -159,10 +159,6 @@ window.addEventListener('load', function () {
   }
 });
 
-// TODO!: Add language switching + save lang in local storage
-// TODO!: Add mouse events for all buttons
-// TODO: Add ES Lint / ES6 features ?
-
 function pressKeyDown(el) {
   for (let i = 0; i < keyboardKeys.length; ++i) {
     if (el.code !== 'Delete' && el.code !== 'Backspace') {
