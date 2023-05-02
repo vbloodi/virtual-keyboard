@@ -1,4 +1,3 @@
-let mainContainer = document.querySelector('.main__container');
 let mainTextarea = document.querySelector('.main__textarea');
 let mainKeyboard = document.querySelector('.main__keyboard');
 let spaceKey = document.querySelector('.Space');
@@ -21,12 +20,9 @@ let metaKey = document.querySelector('.Meta-Key');
 let keyboardKeys = document.querySelectorAll('.key');
 let engKeys = document.querySelectorAll('.eng');
 let ruKeys = document.querySelectorAll('.ru');
-let caseDownKeys = document.querySelectorAll('.caseDown');
-let caseUpKeys = document.querySelectorAll('.caseUp');
-let capsKeys = document.querySelectorAll('.caps');
-let shiftCapsKeys = document.querySelectorAll('.shiftCaps');
 
 let selectionStart;
+let selectionEnd;
 
 mainKeyboard.addEventListener('click', function (e) {
   e.stopPropagation();
@@ -297,6 +293,8 @@ function releaseKeyUp(el) {
   }
 }
 
+let elementClassAside = '';
+
 function pressMouseDown(e) {
   const targetElement = e.target;
   let target = targetElement.parentElement;
@@ -354,7 +352,6 @@ function releaseMouseUp(e) {
     target = e.target;
   }
   let elementClassCenter = target.getElementsByClassName('key__center')[0].textContent;
-  let elementClassAside = '';
   if (typeof target.getElementsByClassName('key__aside')[0] !== 'undefined') {
     elementClassAside = target.getElementsByClassName('key__aside')[0].textContent;
   }
