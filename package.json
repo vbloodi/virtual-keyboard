@@ -1,20 +1,27 @@
 {
   "name": "virtual-keyboard",
   "version": "1.0.0",
-  "description": "",
-  "main": "scripts/virtual-keyboard.js",
+  "description": "��v\u0000i\u0000r\u0000t\u0000u\u0000a\u0000l\u0000-\u0000k\u0000e\u0000y\u0000b\u0000o\u0000a\u0000r\u0000d\u0000\r\u0000 \u0000",
+  "main": "index.js",
   "scripts": {
-    "eslint": "eslint source",
-    "pretty": "prettier --write source"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vbloodi/virtual-keyboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vbloodi/virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/vbloodi/virtual-keyboard#readme",
   "devDependencies": {
-    "eslint": "^8.39.0",
+    "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.8"
   }
