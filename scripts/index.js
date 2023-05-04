@@ -1,40 +1,39 @@
-let mainTextarea = document.querySelector('.main__textarea');
-let mainKeyboard = document.querySelector('.main__keyboard');
-let spaceKey = document.querySelector('.Space');
-let tabKey = document.querySelector('.Tab');
-let enterKey = document.querySelector('.Enter');
-let backspaceKey = document.querySelector('.Backspace');
-let shiftLeftKey = document.querySelector('.Shift-Left');
-let shiftRightKey = document.querySelector('.Shift-Right');
-let altLeftKey = document.querySelector('.Alt-Left');
-let altRightKey = document.querySelector('.Alt-Right');
-let controlLeftKey = document.querySelector('.Control-Left');
-let controlRightKey = document.querySelector('.Control-Right');
-let capsLockKey = document.querySelector('.Caps-Lock');
-let deleteKey = document.querySelector('.Delete');
-let arrowUpKey = document.querySelector('.Arrow-Up');
-let arrowDownKey = document.querySelector('.Arrow-Down');
-let arrowLeftKey = document.querySelector('.Arrow-Left');
-let arrowRightKey = document.querySelector('.Arrow-Right');
-let metaKey = document.querySelector('.Meta-Key');
-let keyboardKeys = document.querySelectorAll('.key');
-let engKeys = document.querySelectorAll('.eng');
-let ruKeys = document.querySelectorAll('.ru');
+const mainTextarea = document.querySelector('.main__textarea');
+const mainKeyboard = document.querySelector('.main__keyboard');
+const spaceKey = document.querySelector('.Space');
+const tabKey = document.querySelector('.Tab');
+const enterKey = document.querySelector('.Enter');
+const backspaceKey = document.querySelector('.Backspace');
+const shiftLeftKey = document.querySelector('.Shift-Left');
+const shiftRightKey = document.querySelector('.Shift-Right');
+const altLeftKey = document.querySelector('.Alt-Left');
+const altRightKey = document.querySelector('.Alt-Right');
+const controlLeftKey = document.querySelector('.Control-Left');
+const controlRightKey = document.querySelector('.Control-Right');
+const capsLockKey = document.querySelector('.Caps-Lock');
+const deleteKey = document.querySelector('.Delete');
+const arrowUpKey = document.querySelector('.Arrow-Up');
+const arrowDownKey = document.querySelector('.Arrow-Down');
+const arrowLeftKey = document.querySelector('.Arrow-Left');
+const arrowRightKey = document.querySelector('.Arrow-Right');
+const metaKey = document.querySelector('.Meta-Key');
+const keyboardKeys = document.querySelectorAll('.key');
+const engKeys = document.querySelectorAll('.eng');
+const ruKeys = document.querySelectorAll('.ru');
 
 let selectionStart;
-let selectionEnd;
 
-mainKeyboard.addEventListener('click', function (e) {
+mainKeyboard.addEventListener('click', (e) => {
   e.stopPropagation();
 });
 
-mainTextarea.addEventListener('click', function () {
+mainTextarea.addEventListener('click', () => {
   selectionStart = this.selectionStart;
   selectionEnd = this.selectionEnd;
 });
 
 function returnFocus() {
-  setTimeout(function () {
+  setTimeout(() => {
     mainTextarea.focus();
     mainTextarea.selectionEnd = selectionStart - 1;
   }, 0);
@@ -47,7 +46,9 @@ function removeLastChar() {
 function removeLeftChar() {
   selectionStart = mainTextarea.selectionStart;
   if (selectionStart !== 0) {
-    mainTextarea.value = mainTextarea.value.slice(0, selectionStart - 1) + mainTextarea.value.slice(selectionStart);
+    mainTextarea.value =
+      mainTextarea.value.slice(0, selectionStart - 1) +
+      mainTextarea.value.slice(selectionStart);
   }
 }
 
@@ -56,50 +57,112 @@ function removeRightChar() {
   if (mainTextarea.value.slice(selectionStart).length === 0) {
     mainTextarea.value = mainTextarea.value.slice(0, selectionStart - 1);
   } else {
-    mainTextarea.value = mainTextarea.value.slice(0, selectionStart) + mainTextarea.value.slice(selectionStart + 1);
+    mainTextarea.value =
+      mainTextarea.value.slice(0, selectionStart) +
+      mainTextarea.value.slice(selectionStart + 1);
   }
 }
 
 function capsLockToggle() {
   for (let i = 0; i < keyboardKeys.length; ++i) {
-    if (!keyboardKeys[i].getElementsByClassName('shiftCaps')[0].classList.contains('hidden')) {
-      keyboardKeys[i].getElementsByClassName('caseUp')[0].classList.toggle('hidden');
-      keyboardKeys[i].getElementsByClassName('shiftCaps')[0].classList.toggle('hidden');
-    } else if (typeof keyboardKeys[i].getElementsByClassName('key__aside')[0] !== 'undefined' && keyboardKeys[i].getElementsByClassName('caseUp')[0].classList.contains('hidden')) {
-      keyboardKeys[i].getElementsByClassName('caseDown')[0].classList.toggle('hidden');
-      keyboardKeys[i].getElementsByClassName('caps')[0].classList.toggle('hidden');
-    } else if (!keyboardKeys[i].getElementsByClassName('caseUp')[0].classList.contains('hidden')) {
-      keyboardKeys[i].getElementsByClassName('caseUp')[0].classList.add('hidden');
-      keyboardKeys[i].getElementsByClassName('shiftCaps')[0].classList.toggle('hidden');
+    if (
+      !keyboardKeys[i]
+        .getElementsByClassName('shiftCaps')[0]
+        .classList.contains('hidden')
+    ) {
+      keyboardKeys[i]
+        .getElementsByClassName('caseUp')[0]
+        .classList.toggle('hidden');
+      keyboardKeys[i]
+        .getElementsByClassName('shiftCaps')[0]
+        .classList.toggle('hidden');
+    } else if (
+      typeof keyboardKeys[i].getElementsByClassName('key__aside')[0] !==
+        'undefined' &&
+      keyboardKeys[i]
+        .getElementsByClassName('caseUp')[0]
+        .classList.contains('hidden')
+    ) {
+      keyboardKeys[i]
+        .getElementsByClassName('caseDown')[0]
+        .classList.toggle('hidden');
+      keyboardKeys[i]
+        .getElementsByClassName('caps')[0]
+        .classList.toggle('hidden');
+    } else if (
+      !keyboardKeys[i]
+        .getElementsByClassName('caseUp')[0]
+        .classList.contains('hidden')
+    ) {
+      keyboardKeys[i]
+        .getElementsByClassName('caseUp')[0]
+        .classList.add('hidden');
+      keyboardKeys[i]
+        .getElementsByClassName('shiftCaps')[0]
+        .classList.toggle('hidden');
     }
   }
 }
 
 function shiftUp() {
   for (let i = 0; i < keyboardKeys.length; ++i) {
-    if (!keyboardKeys[i].getElementsByClassName('caseDown')[0].classList.contains('hidden')) {
-      keyboardKeys[i].getElementsByClassName('caseDown')[0].classList.add('hidden');
+    if (
+      !keyboardKeys[i]
+        .getElementsByClassName('caseDown')[0]
+        .classList.contains('hidden')
+    ) {
+      keyboardKeys[i]
+        .getElementsByClassName('caseDown')[0]
+        .classList.add('hidden');
     }
-    if (!keyboardKeys[i].getElementsByClassName('caps')[0].classList.contains('hidden')) {
+    if (
+      !keyboardKeys[i]
+        .getElementsByClassName('caps')[0]
+        .classList.contains('hidden')
+    ) {
       keyboardKeys[i].getElementsByClassName('caps')[0].classList.add('hidden');
-      keyboardKeys[i].getElementsByClassName('shiftCaps')[0].classList.remove('hidden');
-    } else if (keyboardKeys[i].getElementsByClassName('shiftCaps')[0].classList.contains('hidden')) {
-      keyboardKeys[i].getElementsByClassName('caseUp')[0].classList.remove('hidden');
+      keyboardKeys[i]
+        .getElementsByClassName('shiftCaps')[0]
+        .classList.remove('hidden');
+    } else if (
+      keyboardKeys[i]
+        .getElementsByClassName('shiftCaps')[0]
+        .classList.contains('hidden')
+    ) {
+      keyboardKeys[i]
+        .getElementsByClassName('caseUp')[0]
+        .classList.remove('hidden');
     }
   }
 }
 
 function shiftDown() {
   for (let i = 0; i < keyboardKeys.length; ++i) {
-    if (!keyboardKeys[i].getElementsByClassName('shiftCaps')[0].classList.contains('hidden')) {
-      keyboardKeys[i].getElementsByClassName('caseDown')[0].classList.add('hidden');
-      keyboardKeys[i].getElementsByClassName('caps')[0].classList.remove('hidden');
-      keyboardKeys[i].getElementsByClassName('shiftCaps')[0].classList.add('hidden');
+    if (
+      !keyboardKeys[i]
+        .getElementsByClassName('shiftCaps')[0]
+        .classList.contains('hidden')
+    ) {
+      keyboardKeys[i]
+        .getElementsByClassName('caseDown')[0]
+        .classList.add('hidden');
+      keyboardKeys[i]
+        .getElementsByClassName('caps')[0]
+        .classList.remove('hidden');
+      keyboardKeys[i]
+        .getElementsByClassName('shiftCaps')[0]
+        .classList.add('hidden');
     } else {
-      keyboardKeys[i].getElementsByClassName('caseDown')[0].classList.remove('hidden');
-      keyboardKeys[i].getElementsByClassName('shiftCaps')[0].classList.add('hidden');
+      keyboardKeys[i]
+        .getElementsByClassName('caseDown')[0]
+        .classList.remove('hidden');
+      keyboardKeys[i]
+        .getElementsByClassName('shiftCaps')[0]
+        .classList.add('hidden');
       keyboardKeys[i].getElementsByClassName('caps')[0].classList.add('hidden');
-      keyboardKeys[i].getElementsByClassName('caseUp')[0].classList.add('hidden');
+      keyboardKeys[i]
+        .getElementsByClassName('caseUp')[0]
+        .classList.add('hidden');
     }
   }
 }
@@ -107,7 +170,7 @@ function shiftDown() {
 let isFirstClick = true;
 
 function handleFirstKeyDown(el) {
-  let isCapsLockOn = el.getModifierState('CapsLock');
+  const isCapsLockOn = el.getModifierState('CapsLock');
   if (isFirstClick) {
     isFirstClick = false;
     if (isCapsLockOn) {
@@ -121,7 +184,7 @@ function handleFirstKeyDown(el) {
   }
 }
 
-window.addEventListener('load', function () {
+window.addEventListener('load', () => {
   window.addEventListener('mousedown', handleFirstKeyDown);
   window.addEventListener('keydown', handleFirstKeyDown);
   if (!localStorage.getItem('language')) {
@@ -150,7 +213,10 @@ function pressKeyDown(el) {
     if (el.code !== 'Delete' && el.code !== 'Backspace') {
       el.preventDefault();
     }
-    if ((el.code === 'ShiftLeft' && altLeftKey.classList.contains('active')) || (el.code === 'AltLeft' && shiftLeftKey.classList.contains('active'))) {
+    if (
+      (el.code === 'ShiftLeft' && altLeftKey.classList.contains('active')) ||
+      (el.code === 'AltLeft' && shiftLeftKey.classList.contains('active'))
+    ) {
       shiftLeftKey.classList.add('active');
       altLeftKey.classList.add('active');
       shiftUp();
@@ -171,6 +237,7 @@ function pressKeyDown(el) {
           e.classList.remove('hidden');
         });
       }
+      location.reload();
       break;
     }
     if (el.code === 'Space') {
@@ -236,13 +303,24 @@ function pressKeyDown(el) {
       break;
     } else if (el.code === 'MetaLeft') {
       metaKey.classList.add('active');
-    } else if (el.key === keyboardKeys[i].getElementsByClassName('key__center')[0].textContent) {
+    } else if (
+      el.key ===
+      keyboardKeys[i].getElementsByClassName('key__center')[0].textContent
+    ) {
       keyboardKeys[i].classList.add('active');
-      mainTextarea.value += keyboardKeys[i].getElementsByClassName('key__center')[0].textContent;
-    } else if (typeof keyboardKeys[i].getElementsByClassName('key__aside')[0] !== 'undefined') {
-      if (el.key === keyboardKeys[i].getElementsByClassName('key__aside')[0].textContent) {
+      mainTextarea.value +=
+        keyboardKeys[i].getElementsByClassName('key__center')[0].textContent;
+    } else if (
+      typeof keyboardKeys[i].getElementsByClassName('key__aside')[0] !==
+      'undefined'
+    ) {
+      if (
+        el.key ===
+        keyboardKeys[i].getElementsByClassName('key__aside')[0].textContent
+      ) {
         keyboardKeys[i].classList.add('active');
-        mainTextarea.value += keyboardKeys[i].getElementsByClassName('key__aside')[0].textContent;
+        mainTextarea.value +=
+          keyboardKeys[i].getElementsByClassName('key__aside')[0].textContent;
       }
     }
   }
@@ -283,10 +361,19 @@ function releaseKeyUp(el) {
       arrowRightKey.classList.remove('active');
     } else if (el.code === 'MetaLeft') {
       metaKey.classList.remove('active');
-    } else if (el.key === keyboardKeys[i].getElementsByClassName('key__center')[0].textContent) {
+    } else if (
+      el.key ===
+      keyboardKeys[i].getElementsByClassName('key__center')[0].textContent
+    ) {
       keyboardKeys[i].classList.remove('active');
-    } else if (typeof keyboardKeys[i].getElementsByClassName('key__aside')[0] !== 'undefined') {
-      if (el.key === keyboardKeys[i].getElementsByClassName('key__aside')[0].textContent) {
+    } else if (
+      typeof keyboardKeys[i].getElementsByClassName('key__aside')[0] !==
+      'undefined'
+    ) {
+      if (
+        el.key ===
+        keyboardKeys[i].getElementsByClassName('key__aside')[0].textContent
+      ) {
         keyboardKeys[i].classList.remove('active');
       }
     }
@@ -303,14 +390,21 @@ function pressMouseDown(e) {
   } else if (target.tagName === 'SPAN') {
     target = e.target.parentElement.parentElement.parentElement;
   }
-  let elementClassCenter = target.getElementsByClassName('key__center')[0].textContent;
-  let elementClassAside = '';
+  const elementClassCenter =
+    target.getElementsByClassName('key__center')[0].textContent;
   if (typeof target.getElementsByClassName('key__aside')[0] !== 'undefined') {
-    elementClassAside = target.getElementsByClassName('key__aside')[0].textContent;
+    elementClassAside =
+      target.getElementsByClassName('key__aside')[0].textContent;
   }
-  if (elementClassCenter === 'Backspace' && !mainTextarea.classList.contains('active--textarea')) {
+  if (
+    elementClassCenter === 'Backspace' &&
+    !mainTextarea.classList.contains('active--textarea')
+  ) {
     removeLastChar();
-  } else if (elementClassCenter === 'Backspace' && mainTextarea.classList.contains('active--textarea')) {
+  } else if (
+    elementClassCenter === 'Backspace' &&
+    mainTextarea.classList.contains('active--textarea')
+  ) {
     removeLeftChar();
   } else if (elementClassCenter === 'Del') {
     removeRightChar();
@@ -321,24 +415,23 @@ function pressMouseDown(e) {
     mainTextarea.value += '\n';
   } else if (elementClassCenter === 'Shift') {
     shiftUp();
-  } else if (elementClassCenter === 'Ctrl') {
-    return;
-  } else if (elementClassCenter === 'Alt') {
-    return;
-  } else if (elementClassCenter === '⊞') {
-    return;
   } else if (elementClassCenter === 'Caps Lock') {
-    if (isFirstClick) {
-      return;
-    } else {
+    if (!isFirstClick) {
       capsLockKey.classList.toggle('active');
       capsLockToggle();
     }
-  } else if (capsLockKey.classList.contains('active') === true && (shiftLeftKey.classList.contains('active') || shiftRightKey.classList.contains('active'))) {
+  } else if (
+    capsLockKey.classList.contains('active') === true &&
+    (shiftLeftKey.classList.contains('active') ||
+      shiftRightKey.classList.contains('active'))
+  ) {
     mainTextarea.value += elementClassAside.toLowerCase();
   } else if (capsLockKey.classList.contains('active') === true) {
     mainTextarea.value += elementClassCenter.toUpperCase();
-  } else if (shiftLeftKey.classList.contains('active') || shiftRightKey.classList.contains('active')) {
+  } else if (
+    shiftLeftKey.classList.contains('active') ||
+    shiftRightKey.classList.contains('active')
+  ) {
     mainTextarea.value += elementClassAside.toUpperCase();
   } else {
     mainTextarea.value += elementClassCenter;
@@ -351,9 +444,11 @@ function releaseMouseUp(e) {
   if (target.tagName === 'DIV') {
     target = e.target;
   }
-  let elementClassCenter = target.getElementsByClassName('key__center')[0].textContent;
+  const elementClassCenter =
+    target.getElementsByClassName('key__center')[0].textContent;
   if (typeof target.getElementsByClassName('key__aside')[0] !== 'undefined') {
-    elementClassAside = target.getElementsByClassName('key__aside')[0].textContent;
+    elementClassAside =
+      target.getElementsByClassName('key__aside')[0].textContent;
   }
   if (elementClassCenter === 'Shift') {
     shiftDown();
@@ -371,12 +466,12 @@ keyboardKeys.forEach((e) => {
 
 window.addEventListener('keyup', releaseKeyUp);
 
-mainTextarea.addEventListener('click', function () {
+mainTextarea.addEventListener('click', () => {
   mainTextarea.classList.add('active--textarea');
   mainTextarea.addEventListener('blur', returnFocus);
 });
 
-window.addEventListener('click', function (clickOutsideTextarea) {
+window.addEventListener('click', (clickOutsideTextarea) => {
   if (!mainTextarea.contains(clickOutsideTextarea.target)) {
     mainTextarea.classList.remove('active--textarea');
     mainTextarea.removeEventListener('blur', returnFocus);
