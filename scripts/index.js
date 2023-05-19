@@ -29,13 +29,11 @@ mainKeyboard.addEventListener('click', (e) => {
 
 mainTextarea.addEventListener('click', () => {
   selectionStart = this.selectionStart;
-  selectionEnd = this.selectionEnd;
 });
 
 function returnFocus() {
   setTimeout(() => {
     mainTextarea.focus();
-    mainTextarea.selectionEnd = selectionStart - 1;
   }, 0);
 }
 
